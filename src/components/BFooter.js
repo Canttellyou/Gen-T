@@ -34,8 +34,12 @@ const BFoot = styled(motion.div)`
   display: flex;
   position: relative;
   justify-content: space-between;
-  background-color: #035672;
 
+  background-color: #035672;
+  @media (max-width: 600px) {
+    justify-content: stretch;
+    margin-top: 20rem;
+  }
   .image {
     img {
       top: -56%;
@@ -43,6 +47,11 @@ const BFoot = styled(motion.div)`
       /* width: 37.5%; */
       position: absolute;
       z-index: 2;
+      @media (max-width: 600px) {
+        width: 17rem;
+        top: -45%;
+        left: 2.8rem;
+      }
     }
   }
   .text {
@@ -52,6 +61,9 @@ const BFoot = styled(motion.div)`
   h2 {
     width: 100%;
     padding: 5rem;
+    @media (max-width: 600px) {
+      padding: 10rem 1rem;
+    }
     padding-bottom: 45%;
     font-size: 3.5rem;
     font-weight: 500;
@@ -62,6 +74,9 @@ const BFoot = styled(motion.div)`
       left: 36.2%;
       top: -20rem;
       z-index: 1;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
 `;

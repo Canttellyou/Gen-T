@@ -86,15 +86,25 @@ const DemystifyStyle = styled(motion.div)`
   color: #232323;
   display: flex;
   flex-direction: column;
+  @media (hover: none) and (max-width: 600px) {
+    padding: 5rem 1rem;
+  }
   .paragraph {
     text-align: center;
     h2 {
       font-size: 3.5rem;
       font-weight: 500;
       line-height: 1.2;
+      @media (hover: none) and (max-width: 600px) {
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
     }
     p {
       font-size: 1.2rem;
+      @media (hover: none) and (max-width: 600px) {
+        margin-top: 0.5rem;
+      }
     }
   }
   .payWith {
@@ -107,6 +117,11 @@ const DemystifyStyle = styled(motion.div)`
     background-color: #e8e1e0;
     width: 80%;
     margin-top: 15rem;
+    @media (hover: none) and (max-width: 600px) {
+      width: 100%;
+      flex-direction: column;
+      padding: 3rem;
+    }
     .demystifyDes {
       h2 {
         margin-top: 1rem;
@@ -123,8 +138,15 @@ const DemystifyStyle = styled(motion.div)`
       width: 50%;
       display: flex;
       justify-content: end;
+      @media (hover: none) and (max-width: 600px) {
+        width: 100%;
+        margin-top: 1rem;
+      }
       img {
         width: 90%;
+        @media (hover: none) and (max-width: 600px) {
+          width: 100%;
+        }
       }
     }
     .zigzag {
@@ -132,6 +154,13 @@ const DemystifyStyle = styled(motion.div)`
       top: -8rem;
       left: 40%;
       transition: all ease 2s;
+      @media (hover: none) and (max-width: 600px) {
+        top: -13rem;
+        left: 24.5%;
+        img {
+          width: 11rem;
+        }
+      }
     }
   }
 `;
@@ -139,19 +168,24 @@ const Interact = styled.div`
   width: 100%;
   height: 85vh;
   position: relative;
-  background-size: cover;
+  background-size: fill;
+  background-repeat: no-repeat;
   background-image: url(${people});
+  @media (hover: none) and (max-width: 600px) {
+    height: 60vh;
+    margin-top: 2rem;
+  }
   .people-1 {
     background-color: white;
     color: #035672;
-    left: 12%;
-    top: 40%;
+    left: 5%;
+    top: 2%;
   }
   .people-2 {
     background-color: #035672;
     color: white;
-    right: 8%;
-    bottom: -2%;
+    right: 5%;
+    bottom: 2%;
   }
 `;
 const People = styled(motion.div)`
@@ -163,6 +197,10 @@ const People = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   transition: all ease 2s;
+  @media (hover: none) and (max-width: 600px) {
+    padding: 1rem;
+    width: 50%;
+  }
   img {
     width: 4rem;
     margin-bottom: 1rem;

@@ -121,7 +121,7 @@ const AboutUs = () => {
 };
 const Hero = styled(motion.div)`
   position: relative;
-
+  display: flex;
   background-color: rgb(57, 68, 155);
   padding: 4rem 5rem;
   width: 100%;
@@ -132,11 +132,19 @@ const Hero = styled(motion.div)`
     right: 0;
     width: 48vw !important;
     height: 100%;
+    @media (max-width: 600px) {
+      left: 0;
+      width: 100vw !important;
+      z-index: initial;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 0;
   }
 `;
 
 const Video = styled.video`
-  width: 100%;
+  width: 100% !important;
   height: 100% !important;
   object-fit: cover;
 `;
@@ -150,20 +158,40 @@ const Card = styled(motion.img)`
   :hover {
     transform: scale(1.1) rotate3d(0, 1, 0, 180deg);
   }
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const Main = styled.div`
   width: 50vw;
+  display: flex;
+  flex-direction: column;
   margin-top: 10rem;
   h2 {
     font-size: 4rem;
+    @media (max-width: 600px) {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
   p {
     font-size: 1.4rem;
     font-weight: 300;
+    @media (max-width: 600px) {
+      font-weight: 500;
+      font-size: 1.19rem;
+    }
   }
   .paragraph {
     margin-top: 1rem;
+  }
+  @media (max-width: 600px) {
+    margin-top: 7rem;
+    width: 100%;
+    padding: 3rem 1rem;
+    background-color: rgba(57, 68, 155, 0.45);
+    z-index: 3;
   }
 `;
 const FormStyle = styled.form`
@@ -174,7 +202,11 @@ const FormStyle = styled.form`
     font-size: 1rem;
     padding: 1rem;
     width: 40%;
-
+    @media (max-width: 600px) {
+      width: 60%;
+      background: white;
+      border: none;
+    }
     :focus {
       outline: none;
     }
@@ -199,6 +231,11 @@ const FormStyle = styled.form`
 const DownloadStyle = styled.div`
   display: flex;
   margin-top: 2.2rem;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+  }
 `;
 const AppStyle = styled.div`
   cursor: pointer;
@@ -219,6 +256,10 @@ const AppStyle = styled.div`
     height: 2.2rem;
     margin-right: 1rem;
   }
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+    width: 80%;
+  }
 `;
 const Affiliate = styled.div`
   background-color: #e8e1e0;
@@ -227,13 +268,23 @@ const Affiliate = styled.div`
   justify-content: space-around;
   padding: 1rem 15%;
   align-items: center;
+  @media (max-width: 600px) {
+    padding: 1rem 10%;
+    justify-content: space-between;
+  }
   img {
     /* height: 3rem; */
+    @media (max-width: 600px) {
+      width: 5rem;
+    }
   }
   .img {
     &-1,
     &-3 {
       height: 3rem;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
     &-2 {
       height: 5rem;
@@ -247,28 +298,48 @@ const Shop = styled(motion.div)`
   padding: 6rem 5rem;
 
   justify-content: space-between;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 6rem 1rem;
+  }
   .shop {
     width: 50%;
     align-self: center;
+    @media (hover: none) and (max-width: 600px) {
+      width: 100%;
+    }
   }
   h2 {
     font-size: 4rem;
+    @media (hover: none) and (max-width: 600px) {
+      font-size: 3rem;
+    }
   }
 `;
 const CardSecond = styled.div`
   width: 50%;
   display: flex;
-
+  @media (hover: none) and (max-width: 600px) {
+    width: 100%;
+  }
   img {
     width: 80%;
     transition: all 1s;
     margin-left: 4rem;
     border-radius: 1.2rem;
+    @media (hover: none) and (max-width: 600px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 2rem;
+    }
   }
   :hover {
     img {
       transform: scale(1.15) rotate3d(1, 0, 0, 360deg);
       box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+      @media (hover: none) and (max-width: 600px) {
+        transform: scale(1);
+      }
     }
   }
 `;

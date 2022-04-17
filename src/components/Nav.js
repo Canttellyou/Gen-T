@@ -29,6 +29,10 @@ const Nav = styled(motion.div)`
     width: 10rem;
     cursor: pointer;
   }
+  @media (max-width: 600px) {
+    padding: 1rem;
+    flex-direction: column;
+  }
 `;
 const List = styled.div`
   margin-left: 10.5rem;
@@ -40,9 +44,21 @@ const List = styled.div`
     margin-right: 1.2rem;
     cursor: pointer;
     transition: all 0.3s;
+    @media (max-width: 600px) {
+      margin-right: 0;
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
     :hover {
       transform: translateY(-3px);
     }
+  }
+  @media (max-width: 600px) {
+    margin-left: 0;
+    padding: 0;
+    font-size: 1.2rem;
+
+    justify-content: space-between;
   }
 `;
 export default NavBar;

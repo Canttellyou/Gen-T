@@ -22,10 +22,19 @@ const Footer = () => {
 const Foot = styled(motion.div)`
   margin-top: 5rem;
   padding: 5rem;
+  @media (max-width: 600px) {
+    padding: 1rem;
+  }
   .footImg {
     width: 100%;
+    @media (max-width: 600px) {
+      height: 30vh;
+    }
     img {
       width: 100%;
+      @media (max-width: 600px) {
+        height: 100%;
+      }
     }
   }
 `;
